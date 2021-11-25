@@ -1,14 +1,19 @@
 package models;
 
+import java.util.ArrayList;
+
 public class Baraja {
 	private int lista_cartas;
+	private Baraja carta;
+	private Carta cartaa;
 
 	/**
 	 * @param lista_cartas
 	 */
 	public Baraja() {
 		super();
-		this.lista_cartas = 0;
+		ArrayList<Baraja> baraja = new ArrayList<Baraja>();
+		
 	}
 
 	/**
@@ -24,8 +29,7 @@ public class Baraja {
 			this.lista_cartas = 80;
 			break;
 		}
+		ArrayList<Baraja> baraja = new ArrayList<Baraja>(this.lista_cartas);
+		baraja.add(carta);
 	}
-	
-	
-	
 }
